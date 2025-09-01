@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>purchaseBox</class>
+ <widget class="QDialog" name="purchaseBox">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #0d0d0d;       /* deep black */
+    color: #00ff66;                  /* neon green text */
+    border: 1px solid #00cc44;       /* glowing green border */
+    border-radius: 6px;
+    padding: 6px;
+    font-family: &quot;Consolas&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Purchase WIndow</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>290</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Book Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>330</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Book Quantity</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>290</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #f1f8e9;              /* soft green input */
+    border: 1px solid #66bb6a;
+    border-radius: 4px;
+    padding: 4px;
+    color: #1b5e20;
+}
+
+QLineEdit:focus {
+    border: 1px solid #2e7d32;              /* darker green when focused */
+    background-color: #ffffff;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>330</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #f1f8e9;              /* soft green input */
+    border: 1px solid #66bb6a;
+    border-radius: 4px;
+    padding: 4px;
+    color: #1b5e20;
+}
+
+QLineEdit:focus {
+    border: 1px solid #2e7d32;              /* darker green when focused */
+    background-color: #ffffff;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>380</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #66bb6a;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 6px 12px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #57a05a;
+}
+
+QPushButton:pressed {
+    background-color: #388e3c;
+}</string>
+   </property>
+   <property name="text">
+    <string>Purchase</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>60</y>
+     <width>201</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #e8f5e9;              /* light green background */
+    gridline-color: #a5d6a7;                /* soft green gridlines */
+    selection-background-color: #66bb6a;    /* darker green when selecting */
+    selection-color: white;                 /* white text on selection */
+    alternate-background-color: #c8e6c9;    /* alternating row color */
+    border: 1px solid #388e3c;              /* dark green border */
+}
+
+  QHeaderView::section {
+    background-color: #a5d6a7;              /* header green */
+    color: #1b5e20;                         /* dark green text */
+    font-weight: bold;
+    border: 1px solid #388e3c;
+}
+
+    QTableWidget::item:selected {
+        background-color: #0078d7;
+        color: #ffffff;
+    }
+
+    QScrollBar:vertical {
+        border: none;
+        background: #2d2d44;
+        width: 12px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    QScrollBar::handle:vertical {
+        background: #555;
+        min-height: 20px;
+        border-radius: 6px;
+    }
+
+    QScrollBar::handle:vertical:hover {
+        background: #777;
+    }
+
+    QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+        border: none;
+        background: none;
+    }</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Book Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Price</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

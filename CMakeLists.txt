@@ -12,43 +12,60 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+# Grouped sources
+set(SOURCES
+    Sources/main.cpp
+    Sources/mainwindow.cpp
+    Sources/addbox.cpp
+    Sources/purchasebox.cpp
+)
+
+set(HEADERS
+    Headers/mainwindow.h
+    Headers/addbox.h
+    Headers/purchasebox.h
+)
+
+set(FORMS
+    Forms/mainwindow.ui
+    Forms/addbox.ui
+    Forms/purchasebox.ui
+)
+
+set(CMAKE_AUTOUIC_SEARCH_PATHS
+    ${CMAKE_CURRENT_SOURCE_DIR}/Forms
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(book-management
         MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-        addbox.h addbox.cpp addbox.ui
-        purchasebox.h purchasebox.cpp purchasebox.ui
+        ${SOURCES}
+        ${HEADERS}
+        ${FORMS}
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET book-management APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
         add_library(book-management SHARED
-            ${PROJECT_SOURCES}
+            ${SOURCES}
+            ${HEADERS}
+            ${FORMS}
         )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(book-management
-            ${PROJECT_SOURCES}
+            ${SOURCES}
+            ${HEADERS}
+            ${FORMS}
         )
     endif()
 endif()
 
+target_include_directories(book-management
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/Headers
+)
+
 target_link_libraries(book-management PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.book-management)
 endif()
