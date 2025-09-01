@@ -24,9 +24,9 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #0d0d0d;       /* deep black */
-    color: #00ff66;                  /* neon green text */
-    border: 1px solid #00cc44;       /* glowing green border */
+    background-color: #0d0d0d;
+    color: #00ff66;
+    border: 1px solid #00cc44;
     border-radius: 6px;
     padding: 6px;
     font-family: &quot;Consolas&quot;, &quot;Courier New&quot;, monospace;
@@ -74,7 +74,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
-    background-color: #f1f8e9;              /* soft green input */
+    background-color: #f1f8e9;
     border: 1px solid #66bb6a;
     border-radius: 4px;
     padding: 4px;
@@ -82,7 +82,7 @@
 }
 
 QLineEdit:focus {
-    border: 1px solid #2e7d32;              /* darker green when focused */
+    border: 1px solid #2e7d32;
     background-color: #ffffff;
 }</string>
    </property>
@@ -98,7 +98,7 @@ QLineEdit:focus {
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
-    background-color: #f1f8e9;              /* soft green input */
+    background-color: #f1f8e9;
     border: 1px solid #66bb6a;
     border-radius: 4px;
     padding: 4px;
@@ -106,7 +106,7 @@ QLineEdit:focus {
 }
 
 QLineEdit:focus {
-    border: 1px solid #2e7d32;              /* darker green when focused */
+    border: 1px solid #2e7d32;
     background-color: #ffffff;
 }</string>
    </property>
@@ -153,17 +153,17 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QTableWidget {
-    background-color: #e8f5e9;              /* light green background */
-    gridline-color: #a5d6a7;                /* soft green gridlines */
-    selection-background-color: #66bb6a;    /* darker green when selecting */
-    selection-color: white;                 /* white text on selection */
-    alternate-background-color: #c8e6c9;    /* alternating row color */
-    border: 1px solid #388e3c;              /* dark green border */
+    background-color: #e8f5e9;
+    gridline-color: #a5d6a7; 
+    selection-background-color: #66bb6a;
+    selection-color: white; 
+    alternate-background-color: #c8e6c9; 
+    border: 1px solid #388e3c;
 }
 
   QHeaderView::section {
-    background-color: #a5d6a7;              /* header green */
-    color: #1b5e20;                         /* dark green text */
+    background-color: #a5d6a7;
+    color: #1b5e20;
     font-weight: bold;
     border: 1px solid #388e3c;
 }
