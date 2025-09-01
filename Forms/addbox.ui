@@ -24,9 +24,9 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #0d0d0d;       /* deep black */
-    color: #00ff66;                  /* neon green text */
-    border: 1px solid #00cc44;       /* glowing green border */
+    background-color: #0d0d0d;
+    color: #00ff66; 
+    border: 1px solid #00cc44;
     border-radius: 6px;
     padding: 6px;
     font-family: &quot;Consolas&quot;, &quot;Courier New&quot;, monospace;
@@ -74,7 +74,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
-    background-color: #f1f8e9;              /* soft green input */
+    background-color: #f1f8e9;
     border: 1px solid #66bb6a;
     border-radius: 4px;
     padding: 4px;
@@ -82,7 +82,7 @@
 }
 
 QLineEdit:focus {
-    border: 1px solid #2e7d32;              /* darker green when focused */
+    border: 1px solid #2e7d32; 
     background-color: #ffffff;
 }</string>
    </property>
@@ -98,7 +98,7 @@ QLineEdit:focus {
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
-    background-color: #f1f8e9;              /* soft green input */
+    background-color: #f1f8e9;
     border: 1px solid #66bb6a;
     border-radius: 4px;
     padding: 4px;
@@ -106,7 +106,7 @@ QLineEdit:focus {
 }
 
 QLineEdit:focus {
-    border: 1px solid #2e7d32;              /* darker green when focused */
+    border: 1px solid #2e7d32; 
     background-color: #ffffff;
 }</string>
    </property>
